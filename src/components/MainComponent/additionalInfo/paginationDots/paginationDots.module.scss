@@ -1,0 +1,23 @@
+.dots__wrapper {
+  display: none;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 103px;
+
+  @media (max-width: 900px) {
+    display: flex;
+  }
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: #42567A66;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &__active {
+    background-color: #42567A;
+  }
+}

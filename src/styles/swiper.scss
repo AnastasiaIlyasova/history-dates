@@ -1,0 +1,55 @@
+@import './variables.scss';
+
+.swiper__button-prev.swiper-button-disabled, .swiper__button-next.swiper-button-disabled {
+  display: none !important;
+}
+.swiper__button-prev, .swiper__button-next {
+  color: $blue-color !important;
+}
+
+.swiper__button-prev {
+  left: -70px !important;
+}
+
+.swiper__button-next {
+  right: -70px !important;
+}
+
+.swiper__button-prev,
+.swiper__button-next {
+  background-color: white;
+  color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #3877EE1A;
+  transition: background-color 0.2s;
+  border: none;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.swiper__button-prev:hover,
+.swiper__button-next:hover {
+  background-color: #e5e5e5;
+}
+
+.swiper__button-prev::after,
+.swiper__button-next::after {
+  content: '';
+}
+
+.swiper__button-prev svg,
+.swiper__button-next svg {
+  width: auto;
+  height: auto;
+}
+
+.swiper__button-prev svg {
+  transform: rotate(180deg);
+}

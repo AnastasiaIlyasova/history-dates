@@ -1,0 +1,41 @@
+.wrapper {
+  padding-top: 170px;
+  position: relative;
+
+  @media (max-width: 900px) {
+    padding-top: 59px;
+  }
+}
+
+:root {
+  --aim-color: #42567A1A;
+  --aim-thickness: 1px;
+  --aim-z: 1;
+}
+
+.aim__overlay{
+  position: absolute;
+  inset: 0;
+  z-index: var(--aim-z);
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(var(--aim-color), var(--aim-color)),
+    linear-gradient(var(--aim-color), var(--aim-color)),
+    linear-gradient(var(--aim-color), var(--aim-color)),
+    linear-gradient(var(--aim-color), var(--aim-color));
+  background-size:
+    var(--aim-thickness) 100%,
+    100% var(--aim-thickness),
+    var(--aim-thickness) 100%,
+    var(--aim-thickness) 100%;
+  background-position:
+    50% 0,
+    0 50%,
+    0 0,
+    100% 0;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+}

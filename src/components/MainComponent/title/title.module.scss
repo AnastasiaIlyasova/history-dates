@@ -1,0 +1,34 @@
+@import '../../../styles/variables.scss';
+
+.title {
+  font-weight: bold;
+  color: $dark-blue-color;
+  max-width: 353px;
+  font-size: 56px;
+  line-height: 120%;
+  text-align: left;
+  position: absolute;
+  padding-left: 78px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(180deg, $blue-color, $bright-pink-color);
+  }
+
+  @media (max-width: 900px) {
+    font-size: 20px;
+    max-width: 123px;
+    position: unset;
+    margin-bottom: 56px;
+    padding-left: 20px;
+
+    &::before {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  margin-left: 80px;
+  margin-right: 90px;
+  position: relative;
+  margin-top: 85px;
+  cursor: grab;
+
+  @media (max-width: 900px) {
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}
+
+.swiper__slide {
+  text-align: left;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+
+  &_title {
+    color: $blue-color;
+    font-size: 25px;
+    font-family: "Bebas Neue", sans-serif;
+
+    @media (max-width: 900px) {
+      font-size: 16px;
+    }
+  }
+
+  &_text {
+    color: $dark-blue-color;
+    font-size: 20px;
+    line-height: 30px;
+    max-height: 90px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+
+    @media (max-width: 900px) {
+      font-size: 14px;
+      line-height: 145%;
+    }
+  }
+}
+
+.swiper__animated {
+  transition: opacity 0.4s ease;
+}
+
+.swiper__animated.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.swiper__animated.fadeIn {
+  opacity: 1;
+}
