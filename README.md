@@ -1,4 +1,4 @@
-Project demo - https://historical-dates-2025.netlify.app/
+Демо проекта - https://historical-dates-2025.netlify.app/
 
 Инструкция по запуску проекта:
 1. Клонировать репозиторий - git clone;
