@@ -102,6 +102,13 @@ export const RangeInfo = ({ selectedDate, setSelectedDate }: Props) => {
     return () => clearInterval(timer);
   }, [animatedRange.end, animatedRange.start, neededData.range]);
 
+  useEffect(() => {
+    const index = sliderData.findIndex(item => item.range === selectedDate);
+
+    rotateToIndex(index);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className={css.wrapper}>
       <div className={css.circle__wrapper}>
